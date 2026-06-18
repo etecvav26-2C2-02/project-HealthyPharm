@@ -19,8 +19,8 @@ Organização da tela: conteúdo disposto de forma vertical para facilitar a nav
 ## 5️⃣ Definir a Identidade Visual
 ### 🏢 Nome do Site: HealthyPharm
 ### 🎨 Cores Principais:
-Branco (#FFFFFF)
-Vermelho (#FF0000)
-Azul (#0000FF)
+* Branco (#FFFFFF)
+* Vermelho (#FF0000)
+* Azul (#0000FF)
 ### 🔤 Fonte:
 Arial
