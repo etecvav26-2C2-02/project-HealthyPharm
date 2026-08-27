@@ -10,7 +10,11 @@ if (!isset($_SESSION['usuario'])) {
 require_once 'idioma.php';
 require_once 'config/conexao.php';
 
-$stmt = $pdo->prepare("SELECT * FROM produtos");
+$stmt = $pdo->prepare(
+    "SELECT produtos.*, categorias.nome AS categoria_nome
+     FROM produtos
+     LEFT JOIN categorias ON produtos.categoria_id = categorias.id"
+);
 $stmt->execute();
 
 $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -32,6 +36,8 @@ require_once 'includes/header.php'; ?>
                 <p><strong><?= $traducao['remedio'] ?></strong> <?= ($produto['receita']) ?></p>
 
                 <p><strong><?= $traducao['descricao'] ?></strong> <?= $produto['descricao'] ?></p>
+
+                <p><strong><?= $traducao['categoria'] ?>:</strong> <?= htmlspecialchars($produto['categoria_nome'] ?? $traducao['sem_categoria']) ?></p>
 
                 <div class="acoes">
                     <a class="btn editar" href="editar.php?id=<?= $produto['id'] ?>"><?= $traducao['editar'] ?></a>
