@@ -29,11 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
     $remedio = $_POST['receita'];
     $descricao = $_POST['descricao'];
+    $categoria_id = $_POST['categoria_id'] !== '' ? $_POST['categoria_id'] : null;
 
     $update = "UPDATE produtos
                SET nome = :nome,
                    receita = :receita,
-                   descricao = :descricao
+                   descricao = :descricao,
+                   categoria_id = :categoria_id
                WHERE id = :id";
 
     $comando = $pdo->prepare($update);
@@ -42,12 +44,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ':nome' => $nome,
         ':receita' => $remedio,
         ':descricao' => $descricao,
+        ':categoria_id' => $categoria_id,
         ':id' => $id
     ]);
 
     header("Location: index.php");
     exit;
 }
+
+$categorias = $pdo->query("SELECT * FROM categorias ORDER BY nome")->fetchAll(PDO::FETCH_ASSOC);
 
 require_once 'includes/header.php'; ?>
 
@@ -71,6 +76,15 @@ require_once 'includes/header.php'; ?>
                name="descricao"
                value="<?= $produto['descricao'] ?>"
                required>
+
+        <select name="categoria_id">
+            <option value=""><?= $traducao['sem_categoria'] ?></option>
+            <?php foreach ($categorias as $categoria): ?>
+                <option value="<?= $categoria['id'] ?>" <?= $produto['categoria_id'] == $categoria['id'] ? 'selected' : '' ?>>
+                    <?= htmlspecialchars($categoria['nome']) ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
 
         <button type="submit"><?= $traducao['salvar_alteracoes'] ?></button>
 
