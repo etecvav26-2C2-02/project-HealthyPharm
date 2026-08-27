@@ -14,8 +14,10 @@ CREATE TABLE usuarios (
     senha VARCHAR(255) NOT NULL
 );
 
+-- Senha 'admin' -> em texto puro: 123456
+-- Hash gerado com 3 camadas: md5 -> sha1 -> hash('sha256')
 INSERT INTO usuarios (usuario, senha)
 VALUES (
     'admin',
-    '$2y$10$T4OK19Z8cHUbXCK5xG/2w.hkz57Yz2o/z3fG4HDbTqd0acT21bl.e'
+    '6aab13aae91e7d6fbbd038f3868d7b7879fdc639863dc3da8cdba5a4a731b200'
 );
