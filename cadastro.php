@@ -15,23 +15,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
     $remedio = $_POST['receita'];
     $descricao = $_POST['descricao'];
+    $categoria_id = $_POST['categoria_id'] !== '' ? $_POST['categoria_id'] : null;
 
     $sql = "INSERT INTO produtos
-            (nome, receita, descricao)
+            (nome, receita, descricao, categoria_id)
             VALUES
-            (:nome, :receita, :descricao)";
+            (:nome, :receita, :descricao, :categoria_id)";
 
     $comando = $pdo->prepare($sql);
 
     $comando->execute([
         ':nome' => $nome,
         ':receita' => $remedio,
-        ':descricao' => $descricao
+        ':descricao' => $descricao,
+        ':categoria_id' => $categoria_id
     ]);
 
     header("Location: index.php");
     exit;
 }
+
+$categorias = $pdo->query("SELECT * FROM categorias ORDER BY nome")->fetchAll(PDO::FETCH_ASSOC);
 
 require_once 'includes/header.php'; ?>
 
@@ -46,6 +50,13 @@ require_once 'includes/header.php'; ?>
         <input type="text" name="receita" placeholder="<?= $traducao['ingredientes'] ?>">
 
         <input type="text" name="descricao" placeholder="<?= $traducao['medicamento'] ?>" required>
+
+        <select name="categoria_id">
+            <option value=""><?= $traducao['sem_categoria'] ?></option>
+            <?php foreach ($categorias as $categoria): ?>
+                <option value="<?= $categoria['id'] ?>"><?= htmlspecialchars($categoria['nome']) ?></option>
+            <?php endforeach; ?>
+        </select>
 
         <button type="submit"><?= $traducao['cadastrar'] ?></button>
 
