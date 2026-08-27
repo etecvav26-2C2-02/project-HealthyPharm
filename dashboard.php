@@ -54,6 +54,14 @@ require_once 'idioma.php'; ?>
 
     <br><br>
 
+    <a href="admin/categorias/listar.php"><?= $traducao['categorias'] ?></a>
+
+    <br><br>
+
+    <a href="admin/usuarios/listar.php"><?= $traducao['usuarios'] ?></a>
+
+    <br><br>
+
     <a href="sobre.php"><?= $traducao['sobre'] ?></a>
 
     <br><br>
