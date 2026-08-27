@@ -10,4 +10,4 @@ if (isset($_GET['lang'])) {
 
 $lang = $_SESSION['lang'] ?? 'pt';
 
-$traducao = require "lang/$lang.php"; ?>
+$traducao = require __DIR__ . "/lang/$lang.php"; ?>
