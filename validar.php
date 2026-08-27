@@ -20,7 +20,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($user && $senha_protegida === $user['senha']) {
 
-    $_SESSION['id'] = $user['id'];
+    $_SESSION['id'] = $user['idusuario'];
     $_SESSION['usuario'] = $user['usuario'];
 
     header("Location: dashboard.php");
@@ -30,4 +30,4 @@ if ($user && $senha_protegida === $user['senha']) {
 
     echo "Usuário ou senha inválidos.";
 
-}?>
+} ?>
