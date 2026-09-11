@@ -1,34 +1,60 @@
 <?php
+
 session_start();
 
-if (isset($_SESSION['usuario'])) {
-    header("Location: dashboard.php");
-    exit;
-}
-
 require_once 'idioma.php';
+
 ?>
 
-<body>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<a href="?lang=pt"> Português -- </a>
-<a href="?lang=en"> English -- </a>
-<a href="?lang=it"> Italiano</a>
+<head>
 
-    <h2><?= $traducao['login'] ?></h2>
+    <meta charset="UTF-8">
 
-    <form action="validar.php" method="POST">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <label><?= $traducao['usuario'] ?></label>
-        <input type="text" name="usuario" required>
+    <title><?= $traducao['login'] ?></title>
 
-        <label><?= $traducao['senha'] ?></label>
-        <input type="password" name="senha" required>
+    <link rel="stylesheet" href="css/style.css">
 
-        <button type="submit">
-            <?= $traducao['entrar'] ?>
-        </button>
+</head>
 
-    </form>
+<body class="login-page">
+
+    <div class="login-container">
+
+        <h1>HealthyPharm</h1>
+
+        <h2><?= $traducao['login'] ?></h2>
+
+        <div class="idiomas">
+            <a href="?lang=pt">Português</a>
+            <a href="?lang=en">English</a>
+            <a href="?lang=it">Italiano</a>
+        </div>
+
+        <form action="validar.php" method="POST">
+
+            <label><?= $traducao['usuario'] ?></label>
+
+            <input type="text" name="usuario" required>
+
+
+            <label><?= $traducao['senha'] ?></label>
+
+            <input type="password" name="senha" required>
+
+
+            <button type="submit" class="btn-entrar">
+                <?= $traducao['entrar'] ?>
+            </button>
+
+        </form>
+
+    </div>
 
 </body>
+
+</html>

@@ -1,6 +1,13 @@
 <?php
 
 return [
+    'categoria' => 'category',
+    'sem_categoria' => 'uncategorized',
+    'lista_usuarios' => 'User List',
+    'cadastrar_usuario' => 'Add User',
+    'confirmar_exclusao_categoria' => 'Are you sure you want to delete this category?',
+    'lista_categorias' => 'Category List',
+    'cadastrar_categoria' => 'Add Category',
     'titulo' => 'Health Pharmacy',
     'login' => 'System Login',
     'usuario' => 'User',

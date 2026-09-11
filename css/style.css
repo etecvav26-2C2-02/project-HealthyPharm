@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background: white;
     color: #333;
 }
 
@@ -34,11 +34,23 @@ button {
     padding: 10px 15px;
     font-weight: bold;
     border: 2px solid;
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 
-button {
-    background: #db1414;
+.btn-entrar {
+    display: block;
+    background: #0757C9;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cadastrar {
+    background: red;
     color: white;
     width: 100%;
 }
@@ -85,4 +97,79 @@ footer {
         margin: auto;
     }
 
+}
+
+
+
+
+
+
+
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f7fb;
+}
+
+.login-container {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.login-container h1 {
+    color: #0757C9;
+    margin-bottom: 5px;
+}
+
+.login-container h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.idiomas {
+    margin-bottom: 20px;
+}
+
+.idiomas a {
+    margin: 0 5px;
+    color: #0757C9;
+    text-decoration: none;
+}
+
+.login-container form {
+    max-width: none;
+}
+
+.login-container label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.login-container input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.btn-entrar {
+    background: #0757C9;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-entrar:hover {
+    background: #004494;
 }

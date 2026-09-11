@@ -58,7 +58,9 @@ require_once 'includes/header.php'; ?>
             <?php endforeach; ?>
         </select>
 
-        <button type="submit"><?= $traducao['cadastrar'] ?></button>
+        <button type="submit" class="btn-cadastrar">
+            <?= $traducao['cadastrar'] ?>
+        </button>
 
     </form>
 

@@ -1,6 +1,13 @@
 <?php
 
 return [
+    'sem_categoria' => 'sem categoria',
+    'lista_usuarios' => 'Lista de Usuários',
+    'cadastrar_usuario' => 'Cadastrar Usuário',
+    'confirmar_exclusao_categoria' => 'Tem certeza que deseja excluir esta categoria?',
+    'lista_categorias' => 'Lista de Categorias',
+    'cadastrar_categoria' => 'Cadastrar Categoria',
+    'categoria' => 'Categoria',
     'titulo' => 'Farmácia Saúde',
     'login' => 'Login do Sistema',
     'usuario' => 'Usuário',

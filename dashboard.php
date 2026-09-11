@@ -4,70 +4,91 @@ session_start();
 if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
     exit;
-} 
+}
 
 require_once 'config/conexao.php';
-require_once 'idioma.php'; ?>
+require_once 'idioma.php';
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $traducao['chave'] ?></title>
+
+    <title><?= $traducao['dashboard'] ?></title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
+
     <h1><?= $traducao['titulo'] ?></h1>
+
+    <div class="btn">
+        <a href="?lang=pt">Português -- </a>
+        <a href="?lang=en">English -- </a>
+        <a href="?lang=it">Italiano</a>
+    </div>
+
 </header>
 
 <main>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title><?= $traducao['dashboard'] ?></title>
-</head>
-<body>
+    <section class="container">
 
-<div class="btn">
+        <h1>
+            <?= $traducao['bem_vindo'] ?>,
+            <?= htmlspecialchars($_SESSION['usuario']) ?>!
+        </h1>
 
-    <a href="?lang=pt"> Português -- </a>
-    <a href="?lang=en"> English -- </a>
-    <a href="?lang=it"> Italiano</a>
+        <p><?= $traducao['logado'] ?></p>
 
-</div>
+        <div class="btn">
 
-<hr>
+            <a href="index.php">
+                <?= $traducao['adicionar'] ?>
+            </a>
 
-<h1><?= $traducao['bem_vindo'] ?>, <?= $_SESSION['usuario']; ?>!</h1>
+            <br><br>
 
-<p><?= $traducao['logado'] ?></p>
+            <a href="admin/categorias/listar.php">
+                <?= $traducao['categoria'] ?>
+            </a>
 
-<div class="btn">
+            <br><br>
 
-    <a href="index.php"><?= $traducao['adicionar'] ?></a>
+            <a href="admin/usuarios/listar.php">
+                <?= $traducao['usuario'] ?>
+            </a>
 
-    <br><br>
+            <br><br>
 
-    <a href="admin/categorias/listar.php"><?= $traducao['categorias'] ?></a>
+            <a href="sobre.php">
+                <?= $traducao['sobre'] ?>
+            </a>
 
-    <br><br>
+            <br><br>
 
-    <a href="admin/usuarios/listar.php"><?= $traducao['usuarios'] ?></a>
+            <a href="logout.php">
+                <?= $traducao['sair'] ?>
+            </a>
 
-    <br><br>
+        </div>
 
-    <a href="sobre.php"><?= $traducao['sobre'] ?></a>
+    </section>
 
-    <br><br>
-    <a href="logout.php"><?= $traducao['sair'] ?></a>
+</main>
 
-</div>
+<footer>
+
+    <p>- <?= $traducao['rodape'] ?> -</p>
+
+</footer>
 
 </body>
+
 </html>

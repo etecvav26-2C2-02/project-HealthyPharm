@@ -1,6 +1,14 @@
 <?php
 
+//dicionario chines
 return [
+    'categoria' => 'categoria',
+    'sem_categoria' => 'senza categoria',
+    'lista_usuarios' => 'Lista degli Utenti',
+    'cadastrar_usuario' => 'Crea Utente',
+    'confirmar_exclusao_categoria' => 'Sei sicuro di voler eliminare questa categoria?',
+    'lista_categorias' => 'Lista delle Categorie',
+    'cadastrar_categoria' => 'Cadastrar Categoria',
     'titulo' => 'Farmacia Salute',
     'login' => 'Accesso al Sistema',
     'usuario' => 'Utente',
