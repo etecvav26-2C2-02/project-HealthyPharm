@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #333;
+}
+
+header {
+    background: #db1414;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.container {
+    padding: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.btn,
+button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: bold;
+    border: 2px solid;
+    border-radius: 8px;
+}
+
+.btn-entrar {
+    display: block;
+    background: #0757C9;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cadastrar {
+    background: red;
+    color: white;
+    width: 100%;
+}
+
+.editar {
+    background: #43a047;
+    color: white;
+}
+
+.excluir {
+    background: #f4511e;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    background: #0f82cf;
+    color: white;
+}
+
+@media (min-width: 768px) {
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        gap: 15px;
+    }
+
+    form {
+        max-width: 500px;
+        margin: auto;
+    }
+
+}
+
+
+
+
+
+
+
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f7fb;
+}
+
+.login-container {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.login-container h1 {
+    color: #0757C9;
+    margin-bottom: 5px;
+}
+
+.login-container h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.idiomas {
+    margin-bottom: 20px;
+}
+
+.idiomas a {
+    margin: 0 5px;
+    color: #0757C9;
+    text-decoration: none;
+}
+
+.login-container form {
+    max-width: none;
+}
+
+.login-container label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.login-container input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.btn-entrar {
+    background: #0757C9;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-entrar:hover {
+    background: #004494;
+}
