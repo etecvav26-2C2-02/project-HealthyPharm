@@ -22,7 +22,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 require_once 'includes/header.php'; ?>
 
 <section class="container">
-
+    <a class="btn" href="dashboard.php"><?= $traducao['voltar'] ?></a>
     <h2><?= $traducao['lista_produtos'] ?></h2>
 
     <div class="cards">
@@ -54,7 +54,6 @@ require_once 'includes/header.php'; ?>
         <?php endforeach; ?>
 
     </div>
-
 </section>
 
 <?php require_once 'includes/footer.php'; ?>

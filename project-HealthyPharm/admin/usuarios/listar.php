@@ -18,7 +18,7 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 require_once __DIR__ . '/../../includes/header.php'; ?>
 
 <section class="container">
-
+    <a class="btn" href="../../dashboard.php"><?= $traducao['voltar'] ?></a>
     <h2><?= $traducao['lista_usuarios'] ?></h2>
 
     <a class="btn" href="cadastrar.php"><?= $traducao['cadastrar_usuario'] ?></a>
@@ -43,7 +43,7 @@ require_once __DIR__ . '/../../includes/header.php'; ?>
                     <?php if ($usuario['idusuario'] != $_SESSION['id']): ?>
                         <a class="btn excluir"
                            href="excluir.php?id=<?= $usuario['idusuario'] ?>"
-                           onclick="return confirm('<?= $traducao['confirmar_exclusao_usuario'] ?>')">
+                           onclick="return confirm('<?= $traducao['excluirus'] ?>')">
                             <?= $traducao['excluir'] ?>
                         </a>
                     <?php endif; ?>

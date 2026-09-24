@@ -61,7 +61,7 @@ require_once 'includes/header.php'; ?>
         <button type="submit" class="btn-cadastrar">
             <?= $traducao['cadastrar'] ?>
         </button>
-
+        <a class="btn" href="index.php"><?= $traducao['voltar'] ?></a>
     </form>
 
 </section>

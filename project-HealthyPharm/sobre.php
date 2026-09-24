@@ -1,25 +1,21 @@
-<?php require_once 'config/conexao.php';
-require_once 'idioma.php'; ?>
+<?php
+require_once 'config/conexao.php';
+require_once 'idioma.php';
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
+require_once 'includes/header.php'; ?>
 
-    <a href="?lang=pt"> Português -- </a>
-    <a href="?lang=en"> English -- </a>
-    <a href="?lang=it"> Italiano</a>
+<section class="container">
 
-    <br><br>
+    <div class="sobre-container">
 
-    <?= $traducao['quem_somos'] ?>
+        <h2><?= $traducao['sobre'] ?></h2>
 
-    <br><br>
-    <a href="dashboard.php"><?= $traducao['inicio'] ?></a>
+        <p><?= nl2br($traducao['quem_somos']) ?></p>
 
-</body>
-</html>
+        <a class="btn" href="dashboard.php"><?= $traducao['inicio'] ?></a>
+
+    </div>
+
+</section>
+
+<?php require_once 'includes/footer.php'; ?>

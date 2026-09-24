@@ -1,6 +1,11 @@
 <?php
 
 return [
+    'editar_usuario' => 'User editing',
+    'nova_senha' => 'New password',
+    'editar_categoria' => 'Category editing',
+    'nome_categoria' => 'Category name',
+    'voltar' => 'Return',
     'categoria' => 'category',
     'sem_categoria' => 'uncategorized',
     'lista_usuarios' => 'User List',
@@ -23,6 +28,7 @@ return [
     'descricao' => 'Description',
     'editar' => 'Edit',
     'excluir' => 'Delete',
+    'excluirus' => 'Delete',
     'cadastrar_produto' => 'Register Remedy',
     'lista_produtos' => 'List of Medications',
     'editar_produto' => 'Edit Remedy',
@@ -33,7 +39,6 @@ return [
     'ingredientes' => 'Ingredients',
     'medicamento' => 'Description of the Medication',
     'sobre' => 'About us',
-    'rodape' => 'In Support of Pharmacology',
     'quem_somos' => 'Farma Community is a platform dedicated to sharing knowledge about health, pharmacology, and medications that are often overlooked or not widely known by the general public. Our goal is to build a collaborative community where users can register and share medications they believe are relevant, helping expand access to information about different treatment options.
 
 We believe that knowledge empowers people to make more informed decisions about their health. For this reason, we gather information, experiences, and recommendations from our community to highlight accessible alternatives and increase awareness of medications that may not receive enough attention.

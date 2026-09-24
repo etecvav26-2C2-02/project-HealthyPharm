@@ -2,6 +2,11 @@
 
 //dicionario chines
 return [
+    'nova_senha' => 'Nuova password',
+    'editar_usuario' => 'Modifica delle utenti',
+    'editar_categoria' => 'Modifica delle categorie',
+    'nome_categoria' => 'Nome della categoria',
+    'voltar' => 'Tornare',
     'categoria' => 'categoria',
     'sem_categoria' => 'senza categoria',
     'lista_usuarios' => 'Lista degli Utenti',
@@ -24,6 +29,7 @@ return [
     'descricao' => 'Descrizione',
     'editar' => 'Modifica',
     'excluir' => 'Elimina',
+    'excluirus' => 'Elimina',
     'cadastrar_produto' => 'Registra Rimedio',
     'lista_produtos' => 'Elenco dei Farmaci',
     'editar_produto' => 'Modifica Rimedio',
@@ -34,7 +40,6 @@ return [
     'ingredientes' => 'Ingredienti',
     'medicamento' => 'Descrizione del Farmaco',
     'sobre' => 'Chi Siamo',
-    'rodape' => 'A Supporto della Farmacologia',
     'quem_somos' => 'Farma Community è una piattaforma dedicata alla condivisione di conoscenze sulla salute, la farmacologia e i farmaci che spesso sono poco conosciuti dal grande pubblico. Il nostro obiettivo è creare una comunità collaborativa in cui gli utenti possano registrare e condividere medicinali che ritengono utili, ampliando l accesso alle informazioni sulle diverse opzioni di trattamento.
 
 Crediamo che la conoscenza aiuti le persone a prendere decisioni più consapevoli riguardo alla propria salute. Per questo motivo raccogliamo informazioni, esperienze e suggerimenti dalla comunità per evidenziare alternative accessibili e dare maggiore visibilità a farmaci che potrebbero non ricevere sufficiente attenzione.

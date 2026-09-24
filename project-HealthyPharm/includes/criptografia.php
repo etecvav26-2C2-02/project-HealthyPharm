@@ -4,7 +4,7 @@
  * Aplica três camadas de criptografia sobre a senha, na ordem:
  * 1) MD5
  * 2) SHA1 (sobre o resultado do MD5)
- * 3) hash() com SHA-256 (sobre o resultado do SHA1)
+ * 3) hash() com SHA-256 (em cima o resultado do SHA1)
  *
  * O resultado final é sempre uma string hexadecimal de 64 caracteres.
  */

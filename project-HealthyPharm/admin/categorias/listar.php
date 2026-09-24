@@ -18,7 +18,7 @@ $categorias = $stmt->fetchAll(PDO::FETCH_ASSOC);
 require_once __DIR__ . '/../../includes/header.php'; ?>
 
 <section class="container">
-
+    <a class="btn" href="../../dashboard.php"><?= $traducao['voltar'] ?></a>
     <h2><?= $traducao['lista_categorias'] ?></h2>
 
     <a class="btn" href="cadastrar.php"><?= $traducao['cadastrar_categoria'] ?></a>
