@@ -29,8 +29,8 @@ $params = $_GET;
     </div>
 
     <nav>
-        <a href="index.php"><?= $traducao['produtos'] ?></a>
-        <a href="cadastro.php"><?= $traducao['cadastrar'] ?></a>
+        <a href="<?= BASE_URL ?>/index.php"><?= $traducao['produtos'] ?></a>
+        <a href="<?= BASE_URL ?>/cadastro.php"><?= $traducao['cadastrar'] ?></a>
     </nav>
 </header>
 
